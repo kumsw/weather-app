@@ -1,0 +1,25 @@
+.App {
+  text-align: center;
+  display: flex;
+  height: 750px;
+  width: 450px;
+  border-radius: 25px;
+  margin: auto;
+  margin-top: 25px;
+  background-color: lightblue;
+}
+
+.container {
+  margin: auto;
+  margin-top: 30px;
+}
+
+.header {
+  font-weight: 3rem;
+}
+.info {
+  background-color: aqua;
+  border-radius: 20px;
+  height: 555px;
+  width: 450px;
+}
