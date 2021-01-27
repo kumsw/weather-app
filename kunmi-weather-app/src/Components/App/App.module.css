@@ -7,6 +7,7 @@
   margin: auto;
   margin-top: 25px;
   background-color: lightblue;
+  box-shadow: 5px 5px grey;
 }
 
 .container {
@@ -18,8 +19,9 @@
   font-weight: 3rem;
 }
 .info {
+  position: sticky;
   background-color: aqua;
   border-radius: 20px;
-  height: 555px;
+  height: 541px;
   width: 450px;
 }
