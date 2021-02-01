@@ -5,9 +5,8 @@
 I built this weather app to practice passing state and props around in React. This app makes use of the OpenWeather API and has a mobile first design.
 
 #### App
+<img alt= "Weather forecast search page" src= "kunmi-weather-app/public/search.png" width="350" height="700"/> <img alt="Weather forecast London weather page" src= "kunmi-weather-app/public/london.png" width="350" height="700"/>
 
-![Weather forecast page search](kunmi-weather-app/public/lsearch.png)
-![Weather forecast London weather page ](kunmi-weather-app/public/london.png)
 
 ## To Start
 
