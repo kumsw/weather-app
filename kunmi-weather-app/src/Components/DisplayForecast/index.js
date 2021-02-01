@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import styles from "./DisplayForecast.module.css";
+// import { motion, AnimatePresence } from "framer-motion";
 
 function DisplayForecast({ forecastData, location }) {
-  const [celsiusTemp, setCelsiusTemp] = useState();
+  const [celsiusTemp, setCelsiusTemp] = useState(forecastData.main.temp);
   const [isClicked, setIsClicked] = useState(false);
   // toggle from farenheit to degrees
 
   function handleClick(farenheit) {
-    console.log(farenheit);
     setIsClicked(!isClicked);
     if (isClicked) {
       const farToCel = Math.round(((farenheit - 32) * 5) / 9);
@@ -18,23 +18,31 @@ function DisplayForecast({ forecastData, location }) {
 
   return (
     <div className={styles.forecastData}>
-      <h4> Today's weather</h4>
+      {/* <motion.div
+        className={styles.info}
+        animate={{ scale: 1 }}
+        transition={{ duration: 0.5, opacity: 1 }}
+      > */}
+      <h2> Today's weather</h2>
       <h3>Forecast for {location} </h3>
       <h3>
-        Temperature:
         {isClicked
           ? celsiusTemp + " celsius"
-          : forecastData.main.temp + "  farenheit"}
+          : Math.round(forecastData?.main.temp) + "  farenheit"}
       </h3>
       <label className={styles.switch}>
-        toggle for celsius
         <input
           type="checkbox"
-          onClick={() => handleClick(forecastData.main.temp)}
+          onClick={() => handleClick(forecastData?.main.temp)}
         />
         <span className={styles.sliderRound}></span>
       </label>
-      <h3>Description: {forecastData.weather[0].description}</h3>
+      <h4>{forecastData.weather[0].description}</h4>
+      <img
+        src={`http://openweathermap.org/img/wn/${forecastData.weather[0].icon}@4x.png`}
+        alt={`icon showing a description of ${location}'s weather - ${forecastData.weather[0].description}`}
+      />
+      {/* </motion.div> */}
     </div>
   );
 }

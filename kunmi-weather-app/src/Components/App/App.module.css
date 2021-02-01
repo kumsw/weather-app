@@ -1,13 +1,17 @@
 .App {
+  position: relative;
   text-align: center;
   display: flex;
   height: 750px;
   width: 450px;
-  border-radius: 25px;
+  border-radius: 22px;
   margin: auto;
   margin-top: 25px;
-  background-color: lightblue;
-  box-shadow: 5px 5px grey;
+  background-image: linear-gradient(to bottom right, #33ccff, #3366ff);
+  /* background-color: rgba(0, 0, 255, 0.3); */
+
+  /* background-color: lightblue; */
+  box-shadow: 0.3rem 0.3rem #f2f2f2;
 }
 
 .container {
@@ -16,12 +20,18 @@
 }
 
 .header {
-  font-weight: 3rem;
+  font-size: 3rem;
+  text-shadow: 0.3rem 0.3rem 0.3rem #33ccff;
 }
 .info {
-  position: sticky;
-  background-color: aqua;
+  position: static;
+  background-image: linear-gradient(to bottom right, #33ccff, #3366ff);
+
   border-radius: 20px;
   height: 541px;
   width: 450px;
 }
+
+/* h4 {
+  padding: 1rem;
+} */

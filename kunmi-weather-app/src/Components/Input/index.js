@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styles from "./Input.module.css";
+
 function Input({ setLocation }) {
   const [input, setInput] = useState("");
   return (
