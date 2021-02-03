@@ -34,12 +34,12 @@
   width: 26px;
   left: 4px;
   bottom: 4px;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
 input:checked + .sliderRound {
-  background-color: #2196f3;
+  background-color: #21e5f3;
 }
 
 input:focus + .sliderRound {
